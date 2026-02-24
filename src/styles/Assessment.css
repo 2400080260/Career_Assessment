@@ -1,0 +1,123 @@
+.assessment-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a472a 0%, #0d3b66 50%, #2a1f5c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: white;
+  transition: width 0.3s ease;
+  border-radius: 0;
+}
+
+.progress-text {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.question-card {
+  background: white;
+  border-radius: 16px;
+  padding: 50px 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.4s ease-out;
+}
+
+.question-card h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.category-badge {
+  display: inline-block;
+  background: #ff6b35;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-button {
+  padding: 18px 20px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  color: #333;
+  font-weight: 500;
+}
+
+.option-button:hover {
+  border-color: #ff6b35;
+  background: #fff5f0;
+  transform: translateX(5px);
+}
+
+.option-button:active {
+  transform: scale(0.98);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .assessment-container {
+    padding: 20px;
+  }
+
+  .question-card {
+    padding: 30px 20px;
+  }
+
+  .question-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .progress-text {
+    top: 15px;
+    right: 20px;
+    font-size: 0.8rem;
+  }
+}
